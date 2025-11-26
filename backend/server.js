@@ -18,4 +18,4 @@ app.get("/api/chat/:id", (req, res) => {
     res.send(singleChat);
 })
 
-app.listen(5782, console.log(`server is running on port {5782}`))
+app.listen(PORT, console.log(`server is running on port {5782}`))
