@@ -1,5 +1,6 @@
 const express = require('express');
 const dotenv = require("dotenv");
+const cors = require("cors");
 const connectDB = require("./config/db");
 const { chats } = require("./data/data");
 const colors = require("colors");
@@ -7,13 +8,22 @@ const userRoutes = require("./routes/userRoutes");
 const chatRoutes = require("./routes/chatRoutes");
 const messageRoutes = require("./routes/messageRoutes");
 const uploadRoutes = require("./routes/uploadRoutes");
-const { notFound, errorHandler } = require("./middleware/errorMiddleware");
+const { notFound, errorHandler } = require("./Middleware/errorMiddleware");
 
 dotenv.config();
 connectDB();
 
 const app = express();
 
+// CORS configuration
+const corsOptions = {
+    origin: process.env.NODE_ENV === 'production' 
+        ? process.env.FRONTEND_URL || "*"
+        : "http://localhost:3000",
+    credentials: true,
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -54,7 +64,9 @@ const server = app.listen(PORT, () => {
 const io = require("socket.io")(server, {
     pingTimeout: 60000,
     cors: {
-        origin: "http://localhost:3000",
+        origin: process.env.NODE_ENV === 'production' 
+            ? process.env.FRONTEND_URL || "*"
+            : "http://localhost:3000",
     },
 });
 
