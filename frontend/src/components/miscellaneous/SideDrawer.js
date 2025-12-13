@@ -18,6 +18,7 @@ import {
   Avatar,
   useToast,
   Spinner,
+  Badge,
 } from "@chakra-ui/react";
 import { BellIcon, ChevronDownIcon } from "@chakra-ui/icons";
 import { useHistory } from "react-router-dom";
@@ -25,8 +26,6 @@ import { useState } from "react";
 import axios from "axios";
 import ChatLoading from "../ChatLoading";
 import ProfileModal from "./ProfileModal";
-import NotificationBadge from "react-notification-badge";
-import { Effect } from "react-notification-badge";
 import { getSender } from "../../config/ChatLogics";
 import UserListItem from "../userAvatar/UserListItem";
 import { ChatState } from "../../context/ChatProvider";
@@ -145,8 +144,27 @@ function SideDrawer() {
         </Text>
         <div>
           <Menu>
-            <MenuButton p={1}>
+            <MenuButton p={1} position="relative">
               <BellIcon fontSize="2xl" m={1} />
+              {notification.length > 0 && (
+                <Badge
+                  position="absolute"
+                  top="-2px"
+                  right="-2px"
+                  borderRadius="full"
+                  bg="red.500"
+                  color="white"
+                  fontSize="xs"
+                  fontWeight="bold"
+                  minW="20px"
+                  h="20px"
+                  display="flex"
+                  alignItems="center"
+                  justifyContent="center"
+                >
+                  {notification.length}
+                </Badge>
+              )}
             </MenuButton>
             <MenuList pl={2}>
               {!notification.length && "No New Messages"}
