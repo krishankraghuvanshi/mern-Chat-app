@@ -45,7 +45,11 @@ const Signup = () => {
 
     if (pics.type === "image/jpeg" || pics.type === "image/png") {
       try {
-        const signatureResponse = await axios.post(`${API_BASE_URL}/api/uploads/signature`, {
+        const signatureUrl = `${API_BASE_URL}/api/uploads/signature`;
+        console.log("🔍 Signature URL:", signatureUrl);
+        console.log("🔍 API_BASE_URL:", API_BASE_URL);
+        
+        const signatureResponse = await axios.post(signatureUrl, {
           upload_preset: "chatter",
           folder: "chat-app",
         });
