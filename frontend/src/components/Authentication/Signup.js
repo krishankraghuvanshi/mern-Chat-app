@@ -11,6 +11,7 @@ import {
 } from "@chakra-ui/react";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
+import API_BASE_URL from "../../config/api";
 import { ChatState } from "../../context/ChatProvider";
 
 const Signup = () => {
@@ -44,7 +45,7 @@ const Signup = () => {
 
     if (pics.type === "image/jpeg" || pics.type === "image/png") {
       try {
-        const signatureResponse = await axios.post("/api/uploads/signature", {
+        const signatureResponse = await axios.post(`${API_BASE_URL}/api/uploads/signature`, {
           upload_preset: "chatter",
           folder: "chat-app",
         });
@@ -128,7 +129,7 @@ const Signup = () => {
       };
 
       const { data } = await axios.post(
-        "/api/user",
+        `${API_BASE_URL}/api/user`,
         { name, email, password, pic },
         config
       );

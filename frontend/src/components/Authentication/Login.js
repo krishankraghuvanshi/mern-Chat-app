@@ -12,6 +12,7 @@ import {
 import axios from "axios";
 import { useHistory } from "react-router-dom";
 import { ChatState } from "../../context/ChatProvider";
+import API_BASE_URL from "../../config/api";
 
 const Login = () => {
   const [show, setShow] = useState(false);
@@ -47,7 +48,7 @@ const Login = () => {
       };
 
       const { data } = await axios.post(
-        "/api/user/login",
+        `${API_BASE_URL}/api/user/login`,
         { email, password },
         config
       );

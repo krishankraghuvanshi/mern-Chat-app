@@ -29,6 +29,7 @@ import ProfileModal from "./ProfileModal";
 import { getSender } from "../../config/ChatLogics";
 import UserListItem from "../userAvatar/UserListItem";
 import { ChatState } from "../../context/ChatProvider";
+import API_BASE_URL from "../../config/api";
 
 function SideDrawer() {
   const [search, setSearch] = useState("");
@@ -75,7 +76,7 @@ function SideDrawer() {
         },
       };
 
-      const { data } = await axios.get(`/api/user?search=${search}`, config);
+      const { data } = await axios.get(`${API_BASE_URL}/api/user?search=${search}`, config);
 
       setLoading(false);
       setSearchResult(data);
@@ -102,7 +103,7 @@ function SideDrawer() {
           Authorization: `Bearer ${user.token}`,
         },
       };
-      const { data } = await axios.post(`/api/chat`, { userId }, config);
+      const { data } = await axios.post(`${API_BASE_URL}/api/chat`, { userId }, config);
 
       if (!chats.find((c) => c._id === data._id)) setChats([data, ...chats]);
       setSelectedChat(data);
