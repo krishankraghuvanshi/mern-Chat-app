@@ -4,168 +4,168 @@ A full-stack real-time chat application built using the MERN stack (MongoDB, Exp
 
 🚀 Features
 
-🔐 User Authentication (JWT based)
-
-👤 User Registration & Login
-
-💬 One-to-One Real-Time Chat
-
-🟢 Online/Offline Status
-
-📨 Instant Messaging using Socket.io
-
-📂 Chat History Stored in MongoDB
-
-🎨 Clean & Responsive UI
-
-🔒 Protected Routes
-
-🧾 Logout Functionality
+    🔐 User Authentication (JWT based)
+    
+    👤 User Registration & Login
+    
+    💬 One-to-One Real-Time Chat
+    
+    🟢 Online/Offline Status
+    
+    📨 Instant Messaging using Socket.io
+    
+    📂 Chat History Stored in MongoDB
+    
+    🎨 Clean & Responsive UI
+    
+    🔒 Protected Routes
+    
+    🧾 Logout Functionality
 
 🛠 Tech Stack
 Frontend
 
-⚛️ React.js
-
-📦 Axios
-
-🔄 Context API / Redux (if used)
-
-🎨 CSS / Tailwind CSS (if used)
-
-Backend
-
-🟢 Node.js
-
-🚂 Express.js
-
-🔌 Socket.io
-
-🔐 JWT Authentication
-
-🔑 Bcrypt (Password Hashing)
-
-Database
-
-🍃 MongoDB
-
-🗂 Mongoose ODM
+    ⚛️ React.js
+    
+    📦 Axios
+    
+    🔄 Context API / Redux (if used)
+    
+    🎨 CSS / Tailwind CSS (if used)
+    
+    Backend
+    
+    🟢 Node.js
+    
+    🚂 Express.js
+    
+    🔌 Socket.io
+    
+    🔐 JWT Authentication
+    
+    🔑 Bcrypt (Password Hashing)
+    
+    Database
+    
+    🍃 MongoDB
+    
+    🗂 Mongoose ODM
 
 📁 Folder Structure
-mern-chat-app/
-│
-├── backend/
-│   ├── models/
-│   ├── routes/
-│   ├── controllers/
-│   ├── middleware/
-│   ├── socket/
-│   └── server.js
-│
-├── frontend/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── context/
-│   │   └── App.js
-│
-└── README.md
+      mern-chat-app/
+      │
+      ├── backend/
+      │   ├── models/
+      │   ├── routes/
+      │   ├── controllers/
+      │   ├── middleware/
+      │   ├── socket/
+      │   └── server.js
+      │
+      ├── frontend/
+      │   ├── src/
+      │   │   ├── components/
+      │   │   ├── pages/
+      │   │   ├── context/
+      │   │   └── App.js
+      │
+      └── README.md
 ⚙️ Installation & Setup
-1️⃣ Clone the Repository
-git clone https://github.com/your-username/mern-chat-app.git
-cd mern-chat-app
-2️⃣ Backend Setup
-cd backend
-npm install
+    1️⃣ Clone the Repository
+      git clone https://github.com/your-username/mern-chat-app.git
+      cd mern-chat-app
+    2️⃣ Backend Setup
+      cd backend
+      npm install
 
 Create a .env file inside backend folder:
 
-PORT=5000
-MONGO_URI=your_mongodb_connection_string
-JWT_SECRET=your_secret_key
+    PORT=5000
+    MONGO_URI=your_mongodb_connection_string
+    JWT_SECRET=your_secret_key
 
-Run backend:
+    Run backend:
 
-npm start
-3️⃣ Frontend Setup
-cd frontend
-npm install
-npm start
+      npm start
+    3️⃣ Frontend Setup
+    cd frontend
+    npm install
+    npm start
 
 Frontend will run on:
 
-http://localhost:3000
+    http://localhost:3000
 
 Backend runs on:
 
-http://localhost:5000
-🔌 Socket.io Flow
+    http://localhost:5000
+    🔌 Socket.io Flow
 
-User connects to server
-
-Socket ID is stored
-
-Real-time messages emitted using:
-
-socket.emit()
-
-socket.on()
-
-Messages stored in MongoDB
-
-Receiver gets message instantly
+    User connects to server
+    
+    Socket ID is stored
+    
+    Real-time messages emitted using:
+    
+    socket.emit()
+    
+    socket.on()
+    
+    Messages stored in MongoDB
+    
+    Receiver gets message instantly
 
 🔐 Authentication Flow
 
-User registers
-
-Password hashed using Bcrypt
-
-JWT token generated
-
-Token stored in localStorage
-
-Protected routes verified using middleware
-
-📸 Screenshots (Optional)
+    User registers
+    
+    Password hashed using Bcrypt
+    
+    JWT token generated
+    
+    Token stored in localStorage
+    
+    Protected routes verified using middleware
+    
+    📸 Screenshots (Optional)
 
 You can add screenshots like:
-
-Login Page
-
-Register Page
-
-Chat Interface
-
-Online Users Sidebar
-
-🌟 Future Improvements
-
-📎 File Sharing
+    
+    Login Page
+    
+    Register Page
+    
+    Chat Interface
+    
+    Online Users Sidebar
+    
+    🌟 Future Improvements
+    
+    📎 File Sharing
 
 👥 Group Chat
 
-🖼 Profile Pictures
-
-🔔 Notifications
-
-🌙 Dark Mode
-
-📱 Mobile Optimization
-
-📨 Typing Indicator
-
-🧠 Learning Outcomes
-
-Full-stack application architecture
-
-Real-time communication using WebSockets
-
-Authentication & Authorization
-
-REST API design
-
-State management in React
+    🖼 Profile Pictures
+    
+    🔔 Notifications
+    
+    🌙 Dark Mode
+    
+    📱 Mobile Optimization
+    
+    📨 Typing Indicator
+    
+    🧠 Learning Outcomes
+    
+    Full-stack application architecture
+    
+    Real-time communication using WebSockets
+    
+    Authentication & Authorization
+    
+    REST API design
+    
+    State management in React
 
 MongoDB schema design
 
