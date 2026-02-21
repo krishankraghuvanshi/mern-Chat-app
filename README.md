@@ -70,13 +70,15 @@ Frontend
       │   │   └── App.js
       │
       └── README.md
+      
 ⚙️ Installation & Setup
-    1️⃣ Clone the Repository
-      git clone https://github.com/your-username/mern-chat-app.git
-      cd mern-chat-app
-    2️⃣ Backend Setup
-      cd backend
-      npm install
+        1️⃣ Clone the Repository
+          git clone https://github.com/your-username/mern-chat-app.git
+          cd mern-chat-app
+        2️⃣ Backend Setup
+          cd backend
+          npm install
+          
 
 Create a .env file inside backend folder:
 
@@ -88,9 +90,9 @@ Create a .env file inside backend folder:
 
       npm start
     3️⃣ Frontend Setup
-    cd frontend
-    npm install
-    npm start
+        cd frontend
+        npm install
+        npm start
 
 Frontend will run on:
 
